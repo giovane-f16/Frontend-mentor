@@ -154,6 +154,10 @@ body > main > img {
     color: hsl(228, 45%, 44%);
 }
 
+.img-mobile, 
+.menu-mobile {
+    display: none;
+}
 /*
  @todo: verificar hover no header
  .menu li:not(.features-itens ul li):hover {
@@ -161,3 +165,61 @@ body > main > img {
     background-color: aqua;
 } 
 */
+
+@media screen and (max-width: 958px) {
+    body header div ul.menu,
+    body header div.botoes,
+    .img-desktop {
+        display: none;
+    }
+    
+    .menu-mobile {
+        display: block;
+    }
+
+    .img-mobile {
+        display: block;
+        width: 375px;
+        margin-bottom: 30px;
+    }
+
+    body > * {
+        padding: 15px;
+    }
+
+    body > main > div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    body > main > div > h1 {
+        font-size: 35px;
+        white-space: nowrap;
+        margin: 0px;
+        align-self: center;
+    }
+
+    body > main > div > p {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 10px 10px 20px 10px;
+        text-align: center;
+    }
+
+    body > main > div > a { 
+        margin: 0px auto;
+    }
+
+    body > main > div > div.marcas {
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    body > main > div > div.marcas img {
+        margin-right: 0px;
+        width: 70px;
+    }
+}
