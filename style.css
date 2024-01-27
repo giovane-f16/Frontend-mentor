@@ -155,6 +155,8 @@ body > main > img {
 }
 
 .img-mobile, 
+.img-menu-mobile,
+.menu-layer,
 .menu-mobile {
     display: none;
 }
@@ -173,7 +175,7 @@ body > main > img {
         display: none;
     }
     
-    .menu-mobile {
+    .img-menu-mobile {
         display: block;
     }
 
@@ -181,6 +183,75 @@ body > main > img {
         display: block;
         width: 375px;
         margin-bottom: 30px;
+        align-self: center;
+    }
+    
+    .menu-layer {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 4;
+        top: 0px;
+        cursor: pointer;
+        left: 0px;
+    }
+
+    .menu-mobile {
+        width: 55%;
+        height: 100%;
+        position: fixed;
+        z-index: 5;
+        top: 0px;
+        right: 0px;
+        background-color: #fff;
+        display: none;
+        flex-direction: column;
+    }
+    
+    .active-mobile {
+        display: flex;
+    }
+
+    .menu-mobile .close-menu-mobile {
+        align-self: flex-end;
+        width: 25px;
+    }
+
+    .menu-mobile ul {
+        list-style: none;
+        align-self: start;
+        padding-left: 10px;
+        line-height: 40px;
+        color:  hsl(0, 0%, 41%);
+    }
+
+    .menu-mobile div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        color:  hsl(0, 0%, 41%);
+    }
+
+    .menu-mobile div button:first-of-type {
+        border: none;
+        background-color: #fff;
+    }
+    
+    .menu-mobile div button:nth-of-type(2) {
+        padding: 10px 20px;
+        border-radius: 12px;
+        border: 2px solid hsl(0, 0%, 41%);
+        background-color: #fff;
+    }
+
+    .features-itens-mobile {
+        margin-left: 15px;
+    }
+
+    .features-itens-mobile ul li img {
+        margin-right: 15px;
     }
 
     body > * {
