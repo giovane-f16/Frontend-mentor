@@ -227,11 +227,14 @@ body > main > img {
         color:  hsl(0, 0%, 41%);
     }
 
-    .menu-mobile div {
+    .menu-mobile div.botoes-mobile {
         display: flex;
         flex-direction: column;
         row-gap: 20px;
-        color:  hsl(0, 0%, 41%);
+    }
+
+    .menu-mobile .botoes-mobile button {
+        color: hsl(0, 0%, 41%);;
     }
 
     .menu-mobile div button:first-of-type {
@@ -248,6 +251,16 @@ body > main > img {
 
     .features-itens-mobile {
         margin-left: 15px;
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0px;
+    }
+
+    .features-itens-mobile-active {
+        visibility: visible;
+        max-height: fit-content;
+        transition: opacity 0.5s ease-out;
+        opacity: 1;
     }
 
     .features-itens-mobile ul li img {
