@@ -36,6 +36,7 @@ body > header > div > ul {
 body > header > div > ul > li {
     margin: 0px 20px;
     list-style-type: none;
+    color: hsl(0, 0%, 41%);
 }
 
 .arrow-down {
@@ -77,10 +78,12 @@ body > header > div > ul > li {
     transition: opacity 0.5s ease-out;
     opacity: 0;
     overflow: hidden;
+    height: 0px;
 }
 
 .active {
     opacity: 1;
+    height: auto;
 }
 
 .features-itens ul {
@@ -101,14 +104,17 @@ body > main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-
-body > main > div {
-    margin-top: 80px;
+    align-items: center;
+    margin-top: 70px;
 }
 
 body > main > div > h1 {
     font-size: 70px;
+}
+
+body > main > div > h1 > span,
+body > main > div > p > span {
+    display: block;
 }
 
 body > main > div > p {
@@ -120,6 +126,7 @@ body > main > div > p {
 body > main > div > a {
     color: #fff;
     background-color: #000;
+    border: 1.8px solid #000;
     padding: 15px 25px;
     border-radius: 10px;
     text-decoration: none;
@@ -160,13 +167,13 @@ body > main > img {
 .menu-mobile {
     display: none;
 }
-/*
- @todo: verificar hover no header
- .menu li:not(.features-itens ul li):hover {
+
+ .menu li:not(.features-itens ul li):hover,
+ .botoes button:hover {
     cursor: pointer;
-    background-color: aqua;
+    color: hsl(0, 0%, 0%);
 } 
-*/
+
 
 @media screen and (max-width: 958px) {
     body header div ul.menu,
@@ -174,7 +181,11 @@ body > main > img {
     .img-desktop {
         display: none;
     }
-    
+
+    body > main > div > h1 > span,
+    body > main > div > p > span {
+        display: contents;
+    }
     .img-menu-mobile {
         display: block;
     }
@@ -223,7 +234,6 @@ body > main > img {
 
     .menu-mobile ul {
         list-style: none;
-        align-self: start;
         padding-left: 10px;
         line-height: 40px;
         color:  hsl(0, 0%, 41%);
@@ -273,10 +283,13 @@ body > main > img {
         padding: 15px;
     }
 
+    body > main {
+        margin-top: 0px;
+    }
+
     body > main > div {
         display: flex;
         flex-direction: column;
-        margin-top: 0px;
     }
 
     body > main > div > h1 {
