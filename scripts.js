@@ -14,8 +14,8 @@ jQuery(function() {
         jQuery(this).find(".arrow-down").toggleClass("arrow-up");
     });
 
-    $(".features-itens, .features-itens-mobile").on("click", function(event) {
-        event.stopPropagation();
+    jQuery(".features-itens, .features-itens-mobile").on("click", function(e) {
+        e.stopPropagation();
     });
 
     jQuery("main div a").on("click", function (e) {
