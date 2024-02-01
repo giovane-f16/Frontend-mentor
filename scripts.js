@@ -1,5 +1,5 @@
 jQuery(function() {    
-    jQuery(".menu li").on("click", function() {
+    jQuery("ul.menu li").on("click", function() {
         jQuery(this).find(".features-itens").toggleClass("active");
         jQuery(this).find(".arrow-down").toggleClass("arrow-up");
     });
@@ -12,6 +12,10 @@ jQuery(function() {
     jQuery(".feature").on("click", function () {
         jQuery(this).find(".features-itens-mobile").toggleClass("features-itens-mobile-active");
         jQuery(this).find(".arrow-down").toggleClass("arrow-up");
+    });
+
+    $(".features-itens, .features-itens-mobile").on("click", function(event) {
+        event.stopPropagation();
     });
 
     jQuery("main div a").on("click", function (e) {
