@@ -168,12 +168,12 @@ body > main > img {
     display: none;
 }
 
- .menu li:not(.features-itens ul li):hover,
- .botoes button:hover {
+ .menu li:hover,
+ .botoes button:hover,
+ .features-itens:not(:hover) {
     cursor: pointer;
     color: hsl(0, 0%, 0%);
 } 
-
 
 @media screen and (max-width: 958px) {
     body header div ul.menu,
